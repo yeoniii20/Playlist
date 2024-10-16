@@ -35,6 +35,11 @@ export const RECOMMAND_MUSIC = [
     imageUrl: cover11,
   },
   {
+    title: "Suyoooi",
+    artist: "Suyoooi",
+    imageUrl: "",
+  },
+  {
     title: "Ban HeSuuu",
     artist: "New Jeans",
     imageUrl: cover4,
