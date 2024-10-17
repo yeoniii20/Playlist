@@ -1,0 +1,42 @@
+.wave-animation {
+  position: absolute;
+  top: 50%;
+  left: -70%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wave-animation span {
+  display: block;
+  width: 5px;
+  height: 12px;
+  margin: 0 3px;
+  background: #4fd1c5;
+  /* background: #ff80c2; */
+  /* background: #a0e3bb; */
+  border-radius: 30%;
+  /* border-radius: 50%; */
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.wave-animation span:nth-child(2) {
+  animation-delay: -0.4s;
+}
+
+.wave-animation span:nth-child(3) {
+  animation-delay: -0.8s;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
