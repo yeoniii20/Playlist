@@ -9,7 +9,7 @@ const Card = ({
 }) => {
   return (
     <button
-      className="bg-black-6 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+      className="bg-black-6 hover:bg-black-7 p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300"
       onClick={onClick}
     >
       <div className="flex items-center space-x-4">
