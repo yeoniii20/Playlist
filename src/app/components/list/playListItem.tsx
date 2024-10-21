@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+import { useDrag, useDrop } from "react-dnd";
 import {
   FaPlay,
   FaPause,
@@ -35,9 +37,35 @@ const PlayListItem = ({
   index,
   moveSong,
 }: PlayListItemProps) => {
+  const [{ isDragging }, dragRef] = useDrag({
+    type: "PLAYLIST_ITEM",
+    item: { index },
+    collect: (monitor) => ({
+      isDragging: monitor.isDragging(),
+    }),
+  });
+
+  const [, dropRef] = useDrop({
+    accept: "PLAYLIST_ITEM",
+    hover: (item: { index: number }) => {
+      if (item.index !== index) {
+        moveSong(item.index, index);
+        item.index = index;
+      }
+    },
+  });
+
+  const dragDropRef = (node: HTMLLIElement | null) => {
+    dragRef(node);
+    dropRef(node);
+  };
+
   return (
     <li
-      className={`flex items-center justify-between py-2 px-4 border border-t-0 border-x-0 border-gray-300 border-opacity-50`}
+      ref={dragDropRef}
+      className={`flex items-center justify-between py-2 px-4 border border-t-0 border-x-0 border-gray-300 border-opacity-50 ${
+        isDragging ? "opacity-50" : ""
+      }`}
     >
       <div className="flex items-center">
         <FaGripVertical className="mr-6 text-gray-3" />

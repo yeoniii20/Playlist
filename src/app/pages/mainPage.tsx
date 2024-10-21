@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import { POPULAR_MUSIC, RECOMMAND_MUSIC } from "@/data/dummy";
-import LargeCard from "../components/card/largeCard";
+import LargeCard from "../components/card/largeMusicCard";
 import LoginForm from "../components/loginForm";
-import SmallCard from "../components/card/smallCard";
+import SmallCard from "../components/card/smallMusicCard";
 
 const MainPage = () => {
   const [likedSongs, setLikedSongs] = useState<string[]>([]);
