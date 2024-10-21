@@ -5,6 +5,7 @@ import MainPage from "./pages/mainPage";
 import MusicList from "./pages/musicList";
 import PlayList from "./pages/playList";
 import MyPage from "./pages/myPage";
+import SubscriptionPage from "./pages/subscriptionPage";
 
 const Page = () => {
   return (
@@ -13,6 +14,7 @@ const Page = () => {
       <MusicList />
       <PlayList />
       <MyPage />
+      <SubscriptionPage />
     </div>
   );
 };
