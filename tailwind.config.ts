@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      scale: {
+        "102": "1.02",
+      },
       colors: {
         black: {
           0: "#f5f5f5",
@@ -30,14 +33,25 @@ const config: Config = {
           5: "#4E4E4E",
           6: "#3E3E3E",
         },
+        // pink: {
+        //   0: "#FFE0F0",
+        //   1: "#FFB3D9",
+        //   2: "#FF80C2",
+        //   3: "#FF4DAA",
+        //   4: "#FF1A93",
+        //   5: "#E6007F",
+        //   6: "#D90073",
+        //   7: "#B30066",
+        // },
         pink: {
-          0: "#FFE0F0",
-          1: "#FFB3D9",
-          2: "#FF80C2",
-          3: "#FF4DAA",
-          4: "#FF1A93",
-          5: "#E6007F",
-          6: "#B30066",
+          0: "#FFEAF4",
+          1: "#FFC2DD",
+          2: "#FF9BC5",
+          3: "#FF75AE",
+          4: "#FF4E96",
+          5: "#E64586",
+          6: "#CC3E77",
+          7: "#A93464",
         },
         red: {
           0: "#ffeef080",
