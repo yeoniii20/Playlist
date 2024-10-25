@@ -7,7 +7,6 @@ import {
   FaEllipsisH,
   FaDownload,
   FaPlus,
-  FaCompactDisc,
   FaRecordVinyl,
 } from "react-icons/fa";
 import Image, { StaticImageData } from "next/image";
