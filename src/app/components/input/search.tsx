@@ -4,7 +4,7 @@ const Search = () => {
       <input
         type="text"
         placeholder="Search..."
-        className="w-full max-w-md px-4 py-2 rounded-lg border border-black-3 text-black-7 placeholder-black-4 bg-black-0 focus:outline-none focus:ring-2 focus:ring-pink-3 focus:border-pink-4"
+        className="w-full max-w-md px-4 py-2 rounded-lg border border-black-3 text-black-1 placeholder-black-4 bg-black-6 focus:outline-none focus:ring-2 focus:ring-pink-3 focus:border-pink-4"
       />
     </div>
   );
