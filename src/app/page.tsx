@@ -6,6 +6,9 @@ import MusicList from "./pages/musicList";
 import PlayList from "./pages/playList";
 import MyPage from "./pages/myPage";
 import SubscriptionPage from "./pages/subscriptionPage";
+import MusicDetailPage from "./pages/musicDetailPage";
+import ArtistPage from "./pages/artistPage";
+import EventsPage from "./pages/eventsPage";
 
 const Page = () => {
   return (
@@ -15,6 +18,9 @@ const Page = () => {
       <PlayList />
       <MyPage />
       <SubscriptionPage />
+      <MusicDetailPage />
+      <ArtistPage />
+      <EventsPage />
     </div>
   );
 };
