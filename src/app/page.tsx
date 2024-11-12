@@ -10,10 +10,12 @@ import MusicDetailPage from "./pages/musicDetailPage";
 import ArtistPage from "./pages/artistPage";
 import EventsPage from "./pages/eventsPage";
 import CreateItemForm from "./components/form/createItemForm";
+import ApiTestPage from "./pages/apiTestPage";
 
 const Page = () => {
   return (
     <div className="px-48 bg-black-8">
+      <ApiTestPage />
       <CreateItemForm />
       <MainPage />
       <MusicList />
