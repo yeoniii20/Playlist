@@ -32,7 +32,6 @@ const ApiTestPage = () => {
   };
 
   const handleCreate = async () => {
-    console.log("클릭했슴니당아앙");
     if (newItem.name && newItem.description) {
       const createdItem = await createItem(newItem);
       setItems([...items, createdItem]);

@@ -22,7 +22,7 @@ const ItemList = () => {
   const handleDelete = async (id: any) => {
     try {
       await deleteItem(id);
-      fetchItems(); // 삭제 후 목록 갱신
+      fetchItems();
     } catch (error) {
       console.error("Error deleting item:", error);
     }
