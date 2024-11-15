@@ -6,9 +6,9 @@ import React, { useEffect, useState } from "react";
 const ItemList = () => {
   const [items, setItems] = useState([]);
 
-  useEffect(() => {
-    fetchItems();
-  }, []);
+  // useEffect(() => {
+  //   fetchItems();
+  // }, []);
 
   const fetchItems = async () => {
     try {

@@ -20,9 +20,9 @@ const ApiTestPage = () => {
   const [editingItem, setEditingItem] = useState<Item | null>(null);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    fetchItems();
-  }, []);
+  // useEffect(() => {
+  //   fetchItems();
+  // }, []);
 
   const fetchItems = async () => {
     setLoading(true);
