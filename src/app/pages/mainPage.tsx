@@ -30,7 +30,7 @@ const MainPage = () => {
 
   return (
     <div className="relative p-8 bg-black-8 min-h-screen text-gray-0">
-      <Header onLoginClick={() => setIsLoginModalOpen(true)} />
+      {/* <Header onLoginClick={() => setIsLoginModalOpen(true)} /> */}
       {isLoginModalOpen && (
         <div className="fixed inset-0 bg-black-8 bg-opacity-60 flex items-center justify-center z-50">
           <div className="bg-black-7 p-6 rounded-lg shadow-lg relative">
