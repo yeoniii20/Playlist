@@ -7,6 +7,7 @@ const LoginForm = ({ closeModal }: { closeModal: () => void }) => {
         <button
           onClick={closeModal}
           className="absolute top-8 right-8 text-gray-4 hover:text-gray-0"
+          aria-label="Close modal"
         >
           <FaTimes size={20} />
         </button>
