@@ -22,13 +22,13 @@ interface AlbumModalProps {
   onClose: () => void;
 }
 
-const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
+function AlbumModal({ song, onClose }: AlbumModalProps) {
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [likedSongs, setLikedSongs] = useState<string[]>([]);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout | null = null;
+    let interval: ReturnType<typeof setInterval> | null = null;
 
     if (isPlaying) {
       interval = setInterval(() => {
@@ -65,14 +65,12 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
     );
   };
 
-  // Convert seconds to MM:SS format
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
-  // Calculate the progress percentage for the circle position
   const progressPercentage = (currentTime / song.duration) * 100;
 
   return (
@@ -83,14 +81,17 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
       <div className="bg-gray-5 bg-opacity-60 p-8 rounded-lg relative w-[360px] shadow-lg">
         <button
           onClick={onClose}
+          type="button"
           className="absolute top-3 right-3 text-gray-4 hover:text-white"
         >
           <FaTimes size={20} />
         </button>
         <div className="flex flex-col items-center relative">
-          {/* Heart Button */}
           <button
             onClick={() => toggleLike(song.id)}
+            onKeyDown={(e) => e.key === 'Enter' && toggleLike(song.id)}
+            role="button"
+            aria-label="Like/Unlike"
             className={`absolute bottom-52 right-6 p-2 rounded-full ${
               likedSongs.includes(song.id)
                 ? 'text-pink-5'
@@ -134,16 +135,17 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
           </div>
 
           <div className="flex justify-between items-center w-full mt-8 px-8">
-            <button className="text-gray-1 hover:text-black-0">
+            <button className="text-gray-1 hover:text-black-0" type="button">
               <FaBackward size={24} />
             </button>
             <button
               className="text-gray-1 hover:text-black-0"
+              type="button"
               onClick={handlePlayPause}
             >
-              {isPlaying ? <FaPause size={24} /> : <FaPlay size={24} />}{' '}
+              {isPlaying ? <FaPause size={24} /> : <FaPlay size={24} />}
             </button>
-            <button className="text-gray-1 hover:text-black-0">
+            <button className="text-gray-1 hover:text-black-0" type="button">
               <FaForward size={24} />
             </button>
           </div>
@@ -151,6 +153,6 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
       </div>
     </div>
   );
-};
+}
 
 export default AlbumModal;

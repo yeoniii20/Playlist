@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import PlayListItem from '../components/list/playListItem';
-import { RECOMMAND_MUSIC } from '@/data/dummy';
 import { StaticImageData } from 'next/image';
+
+import { RECOMMAND_MUSIC } from '@/data/dummy.ts';
+import PlayListItem from '../components/list/playListItem.tsx';
 
 interface Song {
   id: string;
@@ -15,7 +16,8 @@ interface Song {
   duration: number;
 }
 
-const PlayList = () => {
+const PlayList = function () {
+  // 함수 선언 방식 사용
   const [playlist, setPlaylist] = useState<Song[]>(RECOMMAND_MUSIC);
   const [currentPlaying, setCurrentPlaying] = useState<string | null>(null);
   const [likedSongs, setLikedSongs] = useState<string[]>([]);

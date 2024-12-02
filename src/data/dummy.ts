@@ -4,7 +4,6 @@ import cover3 from '@/app/images/cover/newjeans1.png';
 import cover4 from '@/app/images/cover/newjeans2.png';
 import cover5 from '@/app/images/cover/newjeans3.png';
 import cover6 from '@/app/images/cover/newjeans4.png';
-import cover7 from '@/app/images/cover/newjeans5.png';
 import cover8 from '@/app/images/cover/newjeans6.png';
 import cover9 from '@/app/images/cover/newjeans7.png';
 import cover10 from '@/app/images/cover/newjeans8.png';

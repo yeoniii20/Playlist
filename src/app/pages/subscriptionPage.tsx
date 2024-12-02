@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import SubscriptionCard from '../components/card/subscriptionCard';
-import OptionModal from '../components/modal/optionModal';
+import SubscriptionCard from '../components/card/subscriptionCard.tsx';
+import OptionModal from '../components/modal/optionModal.tsx';
 
 interface SubscriptionPlan {
   name: string;

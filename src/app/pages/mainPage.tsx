@@ -1,13 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import { POPULAR_MUSIC, RECOMMAND_MUSIC } from '@/data/dummy';
-import LargeCard from '../components/card/largeMusicCard';
-import LoginForm from '../components/loginForm';
-import SmallCard from '../components/card/smallMusicCard';
-import Header from '../components/layout/header';
+import { POPULAR_MUSIC, RECOMMAND_MUSIC } from '@/data/dummy.ts';
+import LargeCard from '../components/card/largeMusicCard.tsx';
+import LoginForm from '../components/loginForm.tsx';
+import SmallCard from '../components/card/smallMusicCard.tsx';
 
-const MainPage = () => {
+function MainPage() {
   const [likedSongs, setLikedSongs] = useState<string[]>([]);
   const [isOptionsOpen, setIsOptionsOpen] = useState<string | null>(null);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
@@ -42,9 +41,9 @@ const MainPage = () => {
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-4 text-pink-3">Recommand Music</h2>
         <div className="flex space-x-4 overflow-x-scroll scrollbar-hide">
-          {RECOMMAND_MUSIC.map((music, index) => (
+          {RECOMMAND_MUSIC.map((music) => (
             <SmallCard
-              key={index}
+              key={music.id}
               music={music}
               isOptionsOpen={isOptionsOpen}
               toggleLike={toggleLike}
@@ -57,9 +56,9 @@ const MainPage = () => {
       <div className="mb-12">
         <h2 className="text-2xl font-bold mb-4 text-pink-3">Popular Charts</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {POPULAR_MUSIC.map((music, index) => (
+          {POPULAR_MUSIC.map((music) => (
             <LargeCard
-              key={index}
+              key={music.id}
               music={music}
               toggleLike={toggleLike}
               likedSongs={likedSongs}
@@ -69,6 +68,6 @@ const MainPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MainPage;

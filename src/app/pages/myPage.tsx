@@ -1,3 +1,7 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import {
   FaUser,
   FaMusic,
@@ -6,11 +10,9 @@ import {
   FaInfoCircle,
   FaShoppingCart,
 } from 'react-icons/fa';
-import Image from 'next/image';
-import Card from '../components/card/card';
-import { useRouter } from 'next/navigation';
+import Card from '../components/card/card.tsx';
 
-const MyPage = () => {
+const MyPage: React.FC = () => {
   const router = useRouter();
   const profileImageUrl: string | null = null;
 
