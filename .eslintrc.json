@@ -17,8 +17,20 @@
   },
   "plugins": ["@typescript-eslint", "react", "react-hooks"],
   "rules": {
+    "quotes": ["error", "single"],
+    "linebreak-style": ["error", "unix"],
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "warn",
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "function-declaration"
+      }
+    ]
+  },
+  "env": {
+    "node": true,
+    "browser": true
   }
 }
