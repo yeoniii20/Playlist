@@ -1,5 +1,5 @@
-import React from "react";
-import { FaHeart, FaPlay, FaShareAlt } from "react-icons/fa";
+import React from 'react';
+import { FaHeart, FaPlay, FaShareAlt } from 'react-icons/fa';
 
 const MusicDetailPage = () => {
   return (

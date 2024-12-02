@@ -1,5 +1,5 @@
-import React from "react";
-import Search from "../input/search";
+import React from 'react';
+import Search from '../input/search';
 
 interface HeaderProps {
   onLoginClick: () => void;

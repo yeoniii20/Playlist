@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { getAllItems, deleteItem } from "@/app/api/service/item/api";
-import React, { useEffect, useState } from "react";
+import { getAllItems, deleteItem } from '@/app/api/service/item/api';
+import React, { useEffect, useState } from 'react';
 
 const ItemList = () => {
   const [items, setItems] = useState([]);
@@ -15,7 +15,7 @@ const ItemList = () => {
       const data = await getAllItems();
       setItems(data);
     } catch (error) {
-      console.error("Error fetching items:", error);
+      console.error('Error fetching items:', error);
     }
   };
 
@@ -24,7 +24,7 @@ const ItemList = () => {
       await deleteItem(id);
       fetchItems();
     } catch (error) {
-      console.error("Error deleting item:", error);
+      console.error('Error deleting item:', error);
     }
   };
 

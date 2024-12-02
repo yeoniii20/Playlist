@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useEffect, useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import React, { useEffect, useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
 import {
   FaTimes,
   FaPlay,
@@ -9,7 +9,7 @@ import {
   FaBackward,
   FaForward,
   FaHeart,
-} from "react-icons/fa";
+} from 'react-icons/fa';
 
 interface AlbumModalProps {
   song: {
@@ -61,7 +61,7 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
     setLikedSongs((prev) =>
       prev.includes(songId)
         ? prev.filter((id) => id !== songId)
-        : [...prev, songId]
+        : [...prev, songId],
     );
   };
 
@@ -69,7 +69,7 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
   const formatTime = (time: number) => {
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
   // Calculate the progress percentage for the circle position
@@ -93,8 +93,8 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
             onClick={() => toggleLike(song.id)}
             className={`absolute bottom-52 right-6 p-2 rounded-full ${
               likedSongs.includes(song.id)
-                ? "text-pink-5"
-                : "text-gray-4 hover:text-pink-5"
+                ? 'text-pink-5'
+                : 'text-gray-4 hover:text-pink-5'
             }`}
           >
             <FaHeart size={30} />
@@ -102,7 +102,7 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
 
           <Image
             src={
-              typeof song.imageUrl === "string"
+              typeof song.imageUrl === 'string'
                 ? song.imageUrl
                 : song.imageUrl.src
             }
@@ -141,7 +141,7 @@ const AlbumModal = ({ song, onClose }: AlbumModalProps) => {
               className="text-gray-1 hover:text-black-0"
               onClick={handlePlayPause}
             >
-              {isPlaying ? <FaPause size={24} /> : <FaPlay size={24} />}{" "}
+              {isPlaying ? <FaPause size={24} /> : <FaPlay size={24} />}{' '}
             </button>
             <button className="text-gray-1 hover:text-black-0">
               <FaForward size={24} />

@@ -1,5 +1,5 @@
-import React from "react";
-import Button from "../button/button";
+import React from 'react';
+import Button from '../button/button';
 
 interface SubscriptionCardProps {
   name: string;
@@ -31,7 +31,7 @@ const SubscriptionCard = ({
           ))}
         </ul>
       </div>
-      <Button title={"구매하기"} onClick={onPurchase} />
+      <Button title={'구매하기'} onClick={onPurchase} />
     </div>
   );
 };

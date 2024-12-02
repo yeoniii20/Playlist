@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { createItem } from "@/app/api/service/item/api";
-import React, { useState } from "react";
+import { createItem } from '@/app/api/service/item/api';
+import React, { useState } from 'react';
 
 const CreateItemForm = () => {
-  const [name, setName] = useState<string>("");
-  const [description, setDescription] = useState<string>("");
+  const [name, setName] = useState<string>('');
+  const [description, setDescription] = useState<string>('');
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -14,11 +14,11 @@ const CreateItemForm = () => {
 
     try {
       await createItem(newItem);
-      alert("아이템이 성공적으로 생성되었습니다.");
-      setName("");
-      setDescription("");
+      alert('아이템이 성공적으로 생성되었습니다.');
+      setName('');
+      setDescription('');
     } catch (error) {
-      console.error("Error creating item:", error);
+      console.error('Error creating item:', error);
     }
   };
 

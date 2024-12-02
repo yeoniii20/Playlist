@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import { useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
 import {
   FaPlay,
   FaPause,
   FaHeart,
   FaEllipsisH,
   FaRecordVinyl,
-} from "react-icons/fa";
-import AlbumModal from "../modal/albumModal";
+} from 'react-icons/fa';
+import AlbumModal from '../modal/albumModal';
 
 interface MusicListItemProps {
   song: {
@@ -85,8 +85,8 @@ const MusicListItem = ({
             onClick={() => toggleLike(song.id)}
             className={`p-2 rounded-full ${
               likedSongs.includes(song.id)
-                ? "text-pink-5"
-                : "text-gray-4 hover:text-pink-5"
+                ? 'text-pink-5'
+                : 'text-gray-4 hover:text-pink-5'
             }`}
           >
             <FaHeart size={20} />

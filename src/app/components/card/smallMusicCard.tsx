@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
+import React, { useRef } from 'react';
 import {
   FaPlay,
   FaHeart,
@@ -8,8 +8,8 @@ import {
   FaDownload,
   FaPlus,
   FaRecordVinyl,
-} from "react-icons/fa";
-import Image, { StaticImageData } from "next/image";
+} from 'react-icons/fa';
+import Image, { StaticImageData } from 'next/image';
 
 interface SmallCardProps {
   music: {
@@ -65,7 +65,7 @@ const SmallCard = ({
       {/* 아이콘 (좋아요, 옵션) */}
       <div
         className={`absolute top-1.5 right-1.5 flex space-x-2 items-center ${
-          isOptionsOpen === music.title ? "translate-x-[0px]" : ""
+          isOptionsOpen === music.title ? 'translate-x-[0px]' : ''
         }`}
         ref={optionsRef}
       >
@@ -73,7 +73,7 @@ const SmallCard = ({
         <button
           onClick={() => toggleLike(music.title)}
           className={`${
-            likedSongs.includes(music.title) ? "text-pink-5" : "text-gray-0"
+            likedSongs.includes(music.title) ? 'text-pink-5' : 'text-gray-0'
           } p-1.5 bg-black-3 bg-opacity-50 rounded-full shadow-md transition duration-300 ease-in-out`}
         >
           <FaHeart className="text-xs" />

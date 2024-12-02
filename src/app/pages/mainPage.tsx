@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import { POPULAR_MUSIC, RECOMMAND_MUSIC } from "@/data/dummy";
-import LargeCard from "../components/card/largeMusicCard";
-import LoginForm from "../components/loginForm";
-import SmallCard from "../components/card/smallMusicCard";
-import Header from "../components/layout/header";
+import React, { useState } from 'react';
+import { POPULAR_MUSIC, RECOMMAND_MUSIC } from '@/data/dummy';
+import LargeCard from '../components/card/largeMusicCard';
+import LoginForm from '../components/loginForm';
+import SmallCard from '../components/card/smallMusicCard';
+import Header from '../components/layout/header';
 
 const MainPage = () => {
   const [likedSongs, setLikedSongs] = useState<string[]>([]);

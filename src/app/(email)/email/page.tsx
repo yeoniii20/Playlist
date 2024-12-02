@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 export default function Home() {
-  const [email, setEmail] = useState<string>("6suyeon@gmail.com");
-  const [sleepTime, setSleepTime] = useState<string>("22:00");
+  const [email, setEmail] = useState<string>('6suyeon@gmail.com');
+  const [sleepTime, setSleepTime] = useState<string>('22:00');
 
   const handleSendTestEmail = async () => {
-    const response = await fetch("/api/email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
+    const response = await fetch('/api/email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        sleepTime: "22:00",
-        email: "6suyeon@gmail.com",
+        sleepTime: '22:00',
+        email: '6suyeon@gmail.com',
       }), // JSON.stringify로 직렬화
     });
 

@@ -1,5 +1,5 @@
-import React from "react";
-import { FaMusic, FaCompactDisc, FaHeart } from "react-icons/fa";
+import React from 'react';
+import { FaMusic, FaCompactDisc, FaHeart } from 'react-icons/fa';
 
 const ArtistPage = () => {
   return (

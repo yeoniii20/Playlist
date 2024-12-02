@@ -1,5 +1,5 @@
-import React from "react";
-import { FaArrowRight } from "react-icons/fa";
+import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 
 interface OptionModalProps {
   onClose: () => void;
@@ -18,7 +18,7 @@ const OptionModal = ({ onClose, open, message }: OptionModalProps) => {
 
   const handleGoPurchase = () => {
     onClose();
-    alert("구매 페이지로 이동합니다...");
+    alert('구매 페이지로 이동합니다...');
   };
 
   return (

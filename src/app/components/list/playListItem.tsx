@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useDrag, useDrop } from "react-dnd";
+import React from 'react';
+import { useDrag, useDrop } from 'react-dnd';
 import {
   FaPlay,
   FaPause,
@@ -9,8 +9,8 @@ import {
   FaEllipsisH,
   FaRecordVinyl,
   FaGripVertical,
-} from "react-icons/fa";
-import Image, { StaticImageData } from "next/image";
+} from 'react-icons/fa';
+import Image, { StaticImageData } from 'next/image';
 
 interface PlayListItemProps {
   song: {
@@ -38,7 +38,7 @@ const PlayListItem = ({
   moveSong,
 }: PlayListItemProps) => {
   const [{ isDragging }, dragRef] = useDrag({
-    type: "PLAYLIST_ITEM",
+    type: 'PLAYLIST_ITEM',
     item: { index },
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
@@ -46,7 +46,7 @@ const PlayListItem = ({
   });
 
   const [, dropRef] = useDrop({
-    accept: "PLAYLIST_ITEM",
+    accept: 'PLAYLIST_ITEM',
     hover: (item: { index: number }) => {
       if (item.index !== index) {
         moveSong(item.index, index);
@@ -64,13 +64,13 @@ const PlayListItem = ({
     <li
       ref={dragDropRef}
       className={`flex items-center justify-between py-2 px-4 border border-t-0 border-x-0 border-gray-300 border-opacity-50 ${
-        isDragging ? "opacity-50" : ""
+        isDragging ? 'opacity-50' : ''
       }`}
     >
       <div className="flex items-center">
         <FaGripVertical className="mr-6 text-gray-3" />
         <div
-          onClick={() => console.log("Clicked")}
+          onClick={() => console.log('Clicked')}
           className="flex items-center cursor-pointer"
         >
           {song.imageUrl ? (
@@ -120,8 +120,8 @@ const PlayListItem = ({
           onClick={() => toggleLike(song.id)}
           className={`p-2 rounded-full ${
             (likedSongs ?? []).includes(song.id)
-              ? "text-pink-5"
-              : "text-gray-4 hover:text-pink-5"
+              ? 'text-pink-5'
+              : 'text-gray-4 hover:text-pink-5'
           }`}
         >
           <FaHeart />

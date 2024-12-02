@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import SubscriptionCard from "../components/card/subscriptionCard";
-import OptionModal from "../components/modal/optionModal";
+import React, { useState } from 'react';
+import SubscriptionCard from '../components/card/subscriptionCard';
+import OptionModal from '../components/modal/optionModal';
 
 interface SubscriptionPlan {
   name: string;
@@ -12,23 +12,23 @@ interface SubscriptionPlan {
 
 const subscriptionPlans: SubscriptionPlan[] = [
   {
-    name: "Basic",
+    name: 'Basic',
     price: 5000,
-    benefits: ["광고 포함", "오프라인 재생 불가", "일부 곡만 이용 가능"],
+    benefits: ['광고 포함', '오프라인 재생 불가', '일부 곡만 이용 가능'],
   },
   {
-    name: "Standard",
+    name: 'Standard',
     price: 10000,
-    benefits: ["광고 없음", "오프라인 재생 가능", "모든 곡 이용 가능"],
+    benefits: ['광고 없음', '오프라인 재생 가능', '모든 곡 이용 가능'],
   },
   {
-    name: "Premium",
+    name: 'Premium',
     price: 15000,
     benefits: [
-      "광고 없음",
-      "오프라인 재생 가능",
-      "모든 곡 무제한 이용",
-      "고음질 스트리밍",
+      '광고 없음',
+      '오프라인 재생 가능',
+      '모든 곡 무제한 이용',
+      '고음질 스트리밍',
     ],
   },
 ];

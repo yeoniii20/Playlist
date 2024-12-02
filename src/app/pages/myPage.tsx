@@ -5,38 +5,38 @@ import {
   FaHeadset,
   FaInfoCircle,
   FaShoppingCart,
-} from "react-icons/fa";
-import Image from "next/image";
-import Card from "../components/card/card";
-import { useRouter } from "next/navigation";
+} from 'react-icons/fa';
+import Image from 'next/image';
+import Card from '../components/card/card';
+import { useRouter } from 'next/navigation';
 
 const MyPage = () => {
   const router = useRouter();
   const profileImageUrl: string | null = null;
 
   // const userLevel = "Bronze";
-  const userLevel = "Silver";
+  const userLevel = 'Silver';
   // const userLevel = "Gold";
   // const userLevel = "Diamond";
   // const userLevel = "";
 
   const navigateToPurchase = () => {
-    router.push("/");
+    router.push('/');
   };
 
   // 레벨에 따른 뱃지 색상 설정
   const getBadgeColor = (level: string) => {
     switch (level) {
-      case "Bronze":
-        return "bg-[rgba(205,127,50,0.8)]";
-      case "Silver":
-        return "bg-[rgba(192,192,192,0.8)]";
-      case "Gold":
-        return "bg-[rgba(255,215,0,0.8)]";
-      case "Diamond":
-        return "bg-[rgba(128,0,128,0.8)]";
+      case 'Bronze':
+        return 'bg-[rgba(205,127,50,0.8)]';
+      case 'Silver':
+        return 'bg-[rgba(192,192,192,0.8)]';
+      case 'Gold':
+        return 'bg-[rgba(255,215,0,0.8)]';
+      case 'Diamond':
+        return 'bg-[rgba(128,0,128,0.8)]';
       default:
-        return "bg-[rgba(128,128,128,0.8)]";
+        return 'bg-[rgba(128,128,128,0.8)]';
     }
   };
 
@@ -61,7 +61,7 @@ const MyPage = () => {
           <h2 className="text-xl font-semibold">뚱이에오</h2>
           <span
             className={`inline-block mt-2 px-3 py-1 text-sm font-medium text-white rounded-full ${getBadgeColor(
-              userLevel
+              userLevel,
             )}`}
           >
             {userLevel}

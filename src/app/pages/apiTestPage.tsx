@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import {
   getAllItems,
   createItem,
   updateItem,
   deleteItem,
-} from "../api/service/item/api";
+} from '../api/service/item/api';
 
 interface Item {
   id: number;
@@ -16,7 +16,7 @@ interface Item {
 
 const ApiTestPage = () => {
   const [items, setItems] = useState<Item[]>([]);
-  const [newItem, setNewItem] = useState({ name: "", description: "" });
+  const [newItem, setNewItem] = useState({ name: '', description: '' });
   const [editingItem, setEditingItem] = useState<Item | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -35,7 +35,7 @@ const ApiTestPage = () => {
     if (newItem.name && newItem.description) {
       const createdItem = await createItem(newItem);
       setItems([...items, createdItem]);
-      setNewItem({ name: "", description: "" });
+      setNewItem({ name: '', description: '' });
     }
   };
 
@@ -43,7 +43,7 @@ const ApiTestPage = () => {
     if (editingItem) {
       const updatedItem = await updateItem(editingItem.id, editingItem);
       setItems(
-        items.map((item) => (item.id === updatedItem.id ? updatedItem : item))
+        items.map((item) => (item.id === updatedItem.id ? updatedItem : item)),
       );
       setEditingItem(null);
     }
@@ -64,7 +64,7 @@ const ApiTestPage = () => {
 
       <div className="bg-black-7 p-6 rounded-lg shadow-lg">
         <h2 className="text-2xl font-semibold text-pink-3 mb-4">
-          {editingItem ? "Edit Item" : "Create New Item"}
+          {editingItem ? 'Edit Item' : 'Create New Item'}
         </h2>
         <input
           type="text"
@@ -96,7 +96,7 @@ const ApiTestPage = () => {
             onClick={editingItem ? handleUpdate : handleCreate}
             className="w-full py-2 bg-pink-5 text-black-0 font-semibold rounded-md hover:bg-pink-6 transition duration-300"
           >
-            {editingItem ? "Update" : "Create"}
+            {editingItem ? 'Update' : 'Create'}
           </button>
           {editingItem && (
             <button
@@ -118,7 +118,7 @@ const ApiTestPage = () => {
               className="bg-black-6 p-4 rounded-lg text-black-1 flex justify-between items-center"
             >
               <div>
-                <strong className="text-pink-2">{item.name}</strong>:{" "}
+                <strong className="text-pink-2">{item.name}</strong>:{' '}
                 <span className="text-black-1">{item.description}</span>
               </div>
               <div className="space-x-2">

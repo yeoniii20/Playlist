@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { RECOMMAND_MUSIC } from "@/data/dummy";
-import { useState } from "react";
-import MusicListItem from "../components/list/musicListItem";
+import { RECOMMAND_MUSIC } from '@/data/dummy';
+import { useState } from 'react';
+import MusicListItem from '../components/list/musicListItem';
 
 const MusicList = () => {
   const [currentPlaying, setCurrentPlaying] = useState<string | null>(null);

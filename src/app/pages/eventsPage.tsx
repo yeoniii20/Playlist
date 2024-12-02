@@ -1,5 +1,5 @@
-import React from "react";
-import { FaCalendarAlt, FaBell } from "react-icons/fa";
+import React from 'react';
+import { FaCalendarAlt, FaBell } from 'react-icons/fa';
 
 const EventsPage = () => {
   return (

@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import PlayListItem from "../components/list/playListItem";
-import { RECOMMAND_MUSIC } from "@/data/dummy";
-import { StaticImageData } from "next/image";
+import { useState } from 'react';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import PlayListItem from '../components/list/playListItem';
+import { RECOMMAND_MUSIC } from '@/data/dummy';
+import { StaticImageData } from 'next/image';
 
 interface Song {
   id: string;

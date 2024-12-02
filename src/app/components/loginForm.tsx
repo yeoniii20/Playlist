@@ -1,4 +1,4 @@
-import { FaUser, FaLock, FaTimes } from "react-icons/fa";
+import { FaUser, FaLock, FaTimes } from 'react-icons/fa';
 
 const LoginForm = ({ closeModal }: { closeModal: () => void }) => {
   return (

@@ -22,7 +22,7 @@ const NowPlaying = () => {
             <p className="text-pink-3 font-semibold">My Favorite Song</p>
           </div>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4">,
           {/* 이전 곡 버튼 */}
           <button className="w-8 h-8 bg-gray-5 rounded-full flex items-center justify-center">
             <SkipBack size={20} weight="bold" className="text-gray-0" />

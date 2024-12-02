@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import React from "react";
-import { FaPlay, FaHeart, FaEllipsisH, FaCompactDisc } from "react-icons/fa";
-import Image, { StaticImageData } from "next/image";
+import React from 'react';
+import { FaPlay, FaHeart, FaEllipsisH, FaCompactDisc } from 'react-icons/fa';
+import Image, { StaticImageData } from 'next/image';
 
 interface LargeCardProps {
   music: {
@@ -46,8 +46,8 @@ const LargeCard = ({ music, toggleLike, likedSongs }: LargeCardProps) => {
           onClick={() => toggleLike(music.title)}
           className={`${
             likedSongs.includes(music.title)
-              ? "text-pink-5 bg-black-3 bg-opacity-50"
-              : "text-gray-0 bg-black-3 bg-opacity-50"
+              ? 'text-pink-5 bg-black-3 bg-opacity-50'
+              : 'text-gray-0 bg-black-3 bg-opacity-50'
           } p-2 rounded-full shadow-md transition duration-300 ease-in-out`}
         >
           <FaHeart />
