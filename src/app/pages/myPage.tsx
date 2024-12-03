@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import {
@@ -12,7 +13,7 @@ import {
 } from 'react-icons/fa';
 import Card from '../components/card/card.tsx';
 
-const MyPage: React.FC = () => {
+function MyPage() {
   const router = useRouter();
   const profileImageUrl: string | null = null;
 
@@ -85,6 +86,6 @@ const MyPage: React.FC = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MyPage;

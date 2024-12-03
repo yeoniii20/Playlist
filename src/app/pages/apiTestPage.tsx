@@ -14,7 +14,7 @@ interface Item {
   description: string;
 }
 
-const ApiTestPage: React.FC = () => {
+function ApiTestPage() {
   const [items, setItems] = useState<Item[]>([]);
   const [newItem, setNewItem] = useState({ name: '', description: '' });
   const [editingItem, setEditingItem] = useState<Item | null>(null);
@@ -144,6 +144,6 @@ const ApiTestPage: React.FC = () => {
       )}
     </div>
   );
-};
+}
 
 export default ApiTestPage;

@@ -1,14 +1,19 @@
 'use client';
 
-import { getAllItems, deleteItem } from '@/app/api/service/item/api';
 import React, { useEffect, useState } from 'react';
+import { getAllItems, deleteItem } from '@/app/api/service/item/api.ts';
 
-const ItemList = () => {
-  const [items, setItems] = useState([]);
+function ItemList() {
+  const [items, setItems] = useState<[]>([]);
 
-  // useEffect(() => {
-  //   fetchItems();
-  // }, []);
+  const handleDelete = async (id: any) => {
+    try {
+      await deleteItem(id);
+      fetchItems();
+    } catch (error) {
+      console.error('Error deleting item:', error);
+    }
+  };
 
   const fetchItems = async () => {
     try {
@@ -19,14 +24,9 @@ const ItemList = () => {
     }
   };
 
-  const handleDelete = async (id: any) => {
-    try {
-      await deleteItem(id);
-      fetchItems();
-    } catch (error) {
-      console.error('Error deleting item:', error);
-    }
-  };
+  useEffect(() => {
+    fetchItems();
+  }, []);
 
   return (
     <div>
@@ -41,6 +41,6 @@ const ItemList = () => {
       </ul>
     </div>
   );
-};
+}
 
 export default ItemList;

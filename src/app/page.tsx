@@ -14,7 +14,7 @@ import ApiTestPage from './pages/apiTestPage.tsx';
 import NowPlaying from './components/layout/nowPlaying.tsx';
 import Header from './components/layout/header.tsx';
 
-const Page = () => {
+function Page() {
   return (
     <div className="px-48 bg-black-8">
       <Header />
@@ -31,6 +31,6 @@ const Page = () => {
       <NowPlaying />
     </div>
   );
-};
+}
 
 export default Page;

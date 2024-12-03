@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image, { StaticImageData } from 'next/image';
 import { useDrag, useDrop } from 'react-dnd';
 import {
   FaPlay,
@@ -10,7 +11,6 @@ import {
   FaRecordVinyl,
   FaGripVertical,
 } from 'react-icons/fa';
-import Image, { StaticImageData } from 'next/image';
 
 interface PlayListItemProps {
   song: {
@@ -28,7 +28,7 @@ interface PlayListItemProps {
   moveSong: (draggedIndex: number, hoveredIndex: number) => void;
 }
 
-const PlayListItem = ({
+function PlayListItem({
   song,
   currentPlaying,
   likedSongs,
@@ -36,7 +36,7 @@ const PlayListItem = ({
   toggleLike,
   index,
   moveSong,
-}: PlayListItemProps) => {
+}: PlayListItemProps) {
   const [{ isDragging }, dragRef] = useDrag({
     type: 'PLAYLIST_ITEM',
     item: { index },
@@ -133,6 +133,6 @@ const PlayListItem = ({
       </div>
     </li>
   );
-};
+}
 
 export default PlayListItem;

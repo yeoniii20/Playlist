@@ -1,10 +1,10 @@
 'use client';
 
-import { RECOMMAND_MUSIC } from '@/data/dummy';
-import { useState } from 'react';
-import MusicListItem from '../components/list/musicListItem';
+import React, { useState } from 'react';
+import { RECOMMAND_MUSIC } from '@/data/dummy.ts';
+import MusicListItem from '../components/list/musicListItem.tsx';
 
-const MusicList = () => {
+function MusicList() {
   const [currentPlaying, setCurrentPlaying] = useState<string | null>(null);
   const [likedSongs, setLikedSongs] = useState<string[]>([]);
 
@@ -41,6 +41,6 @@ const MusicList = () => {
       </ul>
     </div>
   );
-};
+}
 
 export default MusicList;

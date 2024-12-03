@@ -33,7 +33,7 @@ const subscriptionPlans: SubscriptionPlan[] = [
   },
 ];
 
-const SubscriptionPage = () => {
+function SubscriptionPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
 
@@ -68,6 +68,6 @@ const SubscriptionPage = () => {
       />
     </div>
   );
-};
+}
 
 export default SubscriptionPage;
